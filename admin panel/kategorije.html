@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Jela</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<main class="container">
+    <h1>Dobrodošli na kategorije!</h1>
+    <!-- <a href="novo-jelo.html" class="btn btn-primary novo-jelo-btn float-end">Novo jelo</a> -->
+    <div class="row">
+        <!-- Light blue with white text -->
+        <nav class="navbar navbar-expand-sm bg-info navbar-dark">
+            <div class="container-fluid">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" href="index.html">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="jela.html">Ponuda</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="narudzbine.html">Narudbžine</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="kategorije.html">Kategorije</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="sastojci.html">Sastojci</a>
+                  </li>
+              </ul>
+            </div>
+          </nav>
+          <div class="container mt-3"> 
+            <a href="nova-kategorija.html" class="btn btn-primary novo-jelo-btn float-middle">Nova kategorija</a>
+            <br><br>
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>Kategorija</th>
+                    <th>Vrste</th>
+                    <th>Detalji</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Pizza</td>
+                    <td>
+                      <div class="dropdown">
+                        <select class="form-select" id="spisak-pizza">
+                          <option value="1">Margarita</option>
+                          <option value="2">Capricciosa</option>
+                          <option value="3">Quattro Stagioni</option>
+                      </select> 
+                      </div>
+                    </td>
+                    <td>
+                      <a href="kategorija.html?kategorija=pizza" class="btn btn-primary">Izmeni</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Pasta</td>
+                    <td>
+                      <div class="dropdown">
+                        <select class="form-select" id="spisak-pasta">
+                          <option value="1">Carbonara</option>
+                          <option value="2">Bolonjeze</option>
+                          <option value="3">Taljatele</option>
+                      </select> 
+                      </div>
+                    </td>
+                    <td>
+                      <a href="kategorija.html?kategorija=pasta" class="btn btn-primary">Izmeni</a>
+                  </td>
+                  </tr>
+                  <tr>
+                    <td>Rostilj</td>
+                    <td>
+                      <div class="dropdown">
+                        <select class="form-select" id="spisak-rostilj">
+                          <option value="1">Cevapi</option>
+                          <option value="2">Pljeskavica</option>
+                          <option value="3">Belo meso</option>
+                      </select> 
+                      </div>
+                    </td>
+                    <td>
+                      <a href="kategorija.html?kategorija=rostilj" class="btn btn-primary">Izmeni</a>
+                  </td>
+                  </tr>
+                  <tr>
+                    <td>Riba</td>
+                    <td>
+                      <div class="dropdown">
+                        <select class="form-select" id="spisak-riba">
+                          <option value="1">Pastrmka</option>
+                          <option value="2">Som</option>
+                          <option value="3">Losos</option>
+                      </select> 
+                      </div>
+                    </td>
+                    <td>
+                      <a href="kategorija.html?kategorija=riba" class="btn btn-primary">Izmeni</a>
+                  </td>
+                  </tr>
+                  <tr>
+                    <td>Salate</td>
+                    <td>
+                      <div class="dropdown">
+                        <select class="form-select" id="spisak-salata">
+                          <option value="1">Cezar</option>
+                          <option value="2">Sopska</option>
+                          <option value="3">Grcka</option>
+                      </select> 
+                      </div>
+                    </td>
+                    <td>
+                      <a href="kategorija.html?kategorija=salata" class="btn btn-primary">Izmeni</a>
+                  </td>
+                </tbody>
+              </table>
+    </div>
+</main>
+
+<script src="kategorije.js"></script>
+
+<!-- <script>
+
+  
+const dropdown = document.getElementById('spisak-pizza');
+const allOptions = Array.from(dropdown.options).map(option => option.textContent);
+// Convert the array to a JSON string and store it in localStorage
+localStorage.setItem('allPizzas', JSON.stringify(allOptions));
+
+</script> -->
+
+</body>
+</html>

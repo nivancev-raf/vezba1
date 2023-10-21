@@ -36,16 +36,30 @@
             </div>
           </nav>
     </div>
-    
-    <div class="mb-3">
-        <label for="noviTip" class="form-label">Dodaj novu vrstu u ovoj kategoriji</label>
-        <input type="text" class="form-control" id="noviTip" placeholder="Unesite ime nove vrste">
-        <button class="btn btn-primary mt-2">Dodaj</button>
-    </div>
-    <div>
-        <button class="btn btn-warning">Onemogući kategoriju</button>
-    </div>
+
+<form action="http://postman-echo.com/post" method="post">
+  <div class="mb-3">
+      <label for="noviTip" class="form-label">Izabrana kategorija: </label>
+      <div id="nazivKategorije"></div>
+      <br>
+      <label for="noviTip" class="form-label">Vrste kategorije: </label>
+      <br>
+      <div id="listaVrsta"></div>
+      <br>
+      <label for="noviTip" class="form-label">Dodaj novu vrstu u ovoj kategoriji</label>
+      <input type="text" class="form-control" id="noviTip" placeholder="Unesite ime nove vrste">
+      <button type="button" class="btn btn-primary mt-2" id="dodaj-dugme">Dodaj</button>
+  </div>
+  <!-- Skriveni input za slanje svih pizza kao jednog stringa -->
+  <input type="hidden" id="allItems" name="vrste">
+  <div>
+      <button type="button" class="btn btn-warning">Onemogući kategoriju</button>
+      <button type="submit" class="btn btn-primary" id="sacuvaj-dugme">Sačuvaj</button>
+  </div>
+</form>
+
 </main>
+<script src="kategorija.js"></script>
 
 
 </body>
